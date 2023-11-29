@@ -5,14 +5,12 @@ Created on Wed Nov 29 10:35:08 2023
 
 @author: ASUS
 """
-
 from opentrons import protocol_api
 from opentrons import simulate
 
-requirements = {'robotType': 'Flex', 'apiLevel': '2.15'}
+requirements = {'robotType': 'OT-2', 'apiLevel': '2.15'}
 
 metadata = {
-    'apiLevel': '2.15',
     "author": "Warren <whh120@ic.ac.uk>",
     'protocolName': 'iGEM serial dilution tutorial',
     'description': 'protocol for serial dilution for the iGEM dye calibration'
