@@ -30,13 +30,12 @@ def run(protocol: protocol_api.ProtocolContext):
         "p300_multi_gen2", mount="left", tip_racks=[tiprack])
     
     # PBS loading
-    left_pipette.pick_up_tip()
     row = plate.rows()[0]
     left_pipette.transfer(100, reservoir['A1'], row[1:])
     left_pipette.drop_tip()
     
     # Fluorescein loading + SD
-    left_pipette.pick_up_tip()
+
     left_pipette.transfer(200, reservoir['A2'], row[0], mix_after=(3,50))
     left_pipette.transfer(100, row[:10], row[1:11], mix_after=(3,50), blow_out = True)
     left_pipette.aspirate(100, row[10]) 
