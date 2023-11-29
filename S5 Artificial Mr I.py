@@ -31,7 +31,7 @@ def run(protocol: protocol_api.ProtocolContext):
     
     # PBS loading
     left_pipette.pick_up_tip()
-    row = plate.row()[0]
+    row = plate.rows()[0]
     left_pipette.transfer(100, reservoir['A1'], row[1:])
     left_pipette.drop_tip()
     
